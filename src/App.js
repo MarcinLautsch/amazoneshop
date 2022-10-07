@@ -4,21 +4,22 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './Home';
 import Header from './Header';
 import Checkout from './Checkout';
+import Login from './Login';
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
-
         <Switch>
           <Route path="/login">
-            <h1>Login page</h1>
+            <Login />
           </Route>
           <Route path="/checkout">
+            <Header />
             <Checkout />
           </Route>
           <Route path="/">
+            <Header />
             <Home />
           </Route>
         </Switch>
