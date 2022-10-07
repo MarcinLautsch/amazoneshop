@@ -17,17 +17,17 @@
   color: #111;
 }
 
-.CheckoutProduct__image {
+.checkoutProduct__image {
   object-fit: contain;
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
 }
 
-.CheckoutProduct__rating {
+.checkoutProduct__rating {
   display: flex;
 }
 
-.CheckoutProduct__title {
+.checkoutProduct__title {
   display: flex;
   font-size: 18px;
   font-weight: 600;
