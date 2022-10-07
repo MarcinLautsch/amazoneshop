@@ -5,6 +5,16 @@ import { Link } from 'react-router-dom';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const signIn = (event) => {
+    event.preventDefault();
+    //firebase uzywac do logowania//
+  };
+
+  cosnt register = (event) => {
+    event.preventDefault();
+        //firebase uzywac do rejestracja//
+  };
+
   return (
     <div className="login">
       <Link to="/">
@@ -23,8 +33,14 @@ function Login() {
             onChange={(event) => setEmail(event.target.value)}></input>
 
           <h5>Password</h5>
-          <input className="przycisk2" type="password"></input>
-          <button className="login__SignInButton">Sign In</button>
+          <input
+            className="przycisk2"
+            type="password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}></input>
+          <button type="submit" onClick={signIn} className="login__SignInButton">
+            Sign In
+          </button>
         </form>
 
         <p className="informacje">
@@ -33,7 +49,9 @@ function Login() {
           dopasowanych do zainteresowań.
         </p>
 
-        <button className="create__account">Create your Amazone_Clone Account</button>
+        <button onClick={register} className="create__account">
+          Create your Amazone_Clone Account
+        </button>
       </div>
     </div>
   );
