@@ -16,14 +16,22 @@ const reducer = (state, action) => {
       };
 
     case 'REMOVE_FROM_BASKET':
+      const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
+      let newBasket = [...state.basket];
+
+      if (index >= 0) {
+        newBasket.splice(index, 1);
+      } else {
+        console.warn(`nie moge usunac produktu z koszyka  (id: ${action.id}) bo go tam nie ma !`);
+      }
+
       return {
         ...state,
-        basket: state.basket.filter((item) => item.id !== action.id)
+        basket: newBasket
       };
+    default:
+      return state;
   }
 };
-
-// default:
-// return state;
 
 export default reducer;
