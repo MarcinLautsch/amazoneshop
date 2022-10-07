@@ -25,13 +25,8 @@ function Checkout() {
               title={item.title}
               image={item.image}
               price={item.price}
-              rating={item.rating}
-            />
+              rating={item.rating}></CheckoutProduct>
           ))}
-          {/*CheckoutProduct*/}
-          {/*CheckoutProduct*/}
-          {/*CheckoutProduct*/}
-          {/*CheckoutProduct*/}
         </div>
       </div>
 
